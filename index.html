@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <h1>MY DAILY LIST</h1>
+      <p id="date-display"></p>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Quelle est la priorité ?"
+        />
+        <button id="add-task">Ajouter</button>
+      </div>
+
+      <ul id="task-list"></ul>
+
+      <div class="footer">
+        <span id="task-count">0 tâche en cours</span>
+        <button id="clear-all">Vider tout</button>
+      </div>
+    </div>
+  </body>
+</html>

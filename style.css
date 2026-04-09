@@ -1,0 +1,128 @@
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.app-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 350px;
+}
+
+h1 {
+  color: #4a4a4a;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+button#add-task {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #333;
+}
+
+li.doing {
+  border-left: 6px solid #f1c40f;
+}
+
+li:hover {
+  background: #f1f1f1;
+}
+
+/* LA CLASSE POUR LE JS */
+.completed {
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+.footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #777;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+#clear-all {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+li.completed::after {
+  content: "Completed";
+  font-size: 0.65rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1b8548;
+  background: #dcfce7;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+li.doing {
+  border-left: 6px solid #f1c40f;
+}
+
+li.doing::after {
+  content: "En cours";
+  font-size: 0.65rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #967a00;
+  background: #fff9db;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ÉTAT : COMPLETED (VERT) */
+li.completed {
+  border-left: 6px solid #2ecc71;
+  background: #f0fff4;
+}
